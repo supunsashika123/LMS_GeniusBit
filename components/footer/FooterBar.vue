@@ -2,12 +2,12 @@
   <div class="w-full h-12 bg-red fixed flex items-center bottom-0">
     <div class="w-1/3"></div>
     <div class="w-1/3 flex-row justify-center text-white footer-font-size">
-      <div class="flex text-center justify-center">© 2020 THINK PHYSICS</div>
+      <div class="flex text-center justify-center">© 2021 GeniusBit</div>
       <div
-        onclick=" window.open('https://www.ultrizoe.com', '_blank'); return false;"
+        onclick=" window.open('https://www.teamoo7.com', '_blank'); return false;"
         class="flex justify-center font-semibold cursor-pointer text-center"
       >
-        Powered by ULTRIZOE
+        Powered by Team oo7
       </div>
     </div>
     <div class="w-1/3 flex justify-end pr-6">

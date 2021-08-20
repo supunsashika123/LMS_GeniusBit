@@ -56,26 +56,8 @@ export default {
           display: 'Documents',
           icon: 'document',
         },
-        {
-          value: '/live-classes',
-          display: 'Live Classes',
-          icon: 'live-class',
-        },
-        {
-          value: '/gallery',
-          display: 'Gallery',
-          icon: 'image-album',
-        },
-        {
-          value: '/online-quiz',
-          display: 'Online Quizzes',
-          icon: 'question-mark-outline',
-        },
-        {
-          value: '/papers',
-          display: 'Papers',
-          icon: 'document',
-        },
+
+
       ],
     }
   },
