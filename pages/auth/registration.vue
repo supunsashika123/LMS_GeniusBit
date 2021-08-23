@@ -221,6 +221,9 @@ export default {
   },
 
   created() {
+   
+   this.showNotification('error', 'Something went wrong!')
+
     this.fetchRegistrationPageBanner()
   },
 

@@ -1,6 +1,7 @@
 <template>
   <div>
-   
+       <notifications group="foo" />
+
     <client-only></client-only>
     <HeaderBar />
     <Sidebar
