@@ -19,7 +19,8 @@
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/pwa": "^3.0.2",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "vee-validate": "^3.4.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
