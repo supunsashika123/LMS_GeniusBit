@@ -3,11 +3,14 @@
     class="background-image w-full flex items-center h-screen justify-center"
   >
     <div class="bg-white w-full h-screen card-size sm:flex">
-      <div class="w-1/3 flex items-center hidden lg:block my-auto">
-        <img
-          class="side-banner-image-styles flex items-center p-4"
-          :src="registrationBannerUrl"
-        />
+      <div class="w-1/3 flex items-center hidden lg:flex bg-pink" style="border-radius: 32px;">
+        <div class="my-auto">
+          <img
+            class="side-banner-image-styles flex items-center p-4"
+            src="~/assets/images/banner-image.jpg"
+            style="border-radius: 32px"
+          />
+        </div>
       </div>
       <div
         ref="whiteModal"
@@ -26,7 +29,14 @@
                   />
                 </div>
                 <div
-                  class="font-bold text-3xl pt-12 sm:pt-0 text-center sm:text-left"
+                  class="
+                    font-bold
+                    text-3xl
+                    pt-12
+                    sm:pt-0
+                    text-center
+                    sm:text-left
+                  "
                 >
                   Registration
                 </div>
@@ -69,7 +79,12 @@
             </div>
             <div class="w-full lg:w-1/2">
               <div
-                class="hidden logo-position div-height logo-position logo-responsive-display"
+                class="
+                  hidden
+                  logo-position
+                  div-height
+                  logo-position logo-responsive-display
+                "
               >
                 <SvgIcon
                   name="logo-red"
@@ -102,12 +117,21 @@
                     <label
                       class="block text-2xs font-normal text-black text-left"
                     >
-                      A/L Year
+                      Course Name
                     </label>
                     <select
                       id="alYear"
                       v-model="al_year"
-                      class="border mt-1 h-10 w-full border-gray-800 focus:outline-none rounded-lg py-2"
+                      class="
+                        border
+                        mt-1
+                        h-10
+                        w-full
+                        border-gray-800
+                        focus:outline-none
+                        rounded-lg
+                        py-2
+                      "
                       name="alYear"
                     >
                       <option value="">Select</option>
@@ -129,7 +153,16 @@
                     <select
                       id="gender"
                       v-model="gender"
-                      class="border mt-1 h-10 w-full border-gray-800 focus:outline-none rounded-lg py-2"
+                      class="
+                        border
+                        mt-1
+                        h-10
+                        w-full
+                        border-gray-800
+                        focus:outline-none
+                        rounded-lg
+                        py-2
+                      "
                       name="gender"
                     >
                       <option value="" selected>Select</option>
@@ -153,7 +186,9 @@
               <div class="font-normal text-xs pt-1 text-center pb-4 lg:pb-0">
                 if you already have an account ?
                 <NuxtLink to="/auth/login">
-                  <span class="text-red font-bold"> login here</span></NuxtLink
+                  <span class="font-bold" style="color: #043362">
+                    login here</span
+                  ></NuxtLink
                 >
               </div>
             </div>
@@ -165,18 +200,18 @@
 </template>
 
 <script>
-import TextField from '@/components/TextField'
-import PrimaryButton from '@/components/buttons/PrimaryButton'
-import { ValidationObserver } from 'vee-validate'
-import PasswordField from '@/components/PasswordField'
-import SvgIcon from '@/components/SvgIcon'
+import TextField from "@/components/TextField";
+import PrimaryButton from "@/components/buttons/PrimaryButton";
+import { ValidationObserver } from "vee-validate";
+import PasswordField from "@/components/PasswordField";
+import SvgIcon from "@/components/SvgIcon";
 
 export default {
-  name: 'Registration',
+  name: "Registration",
 
-  middleware: 'guest',
+  middleware: "guest",
 
-  layout: 'authentication',
+  layout: "authentication",
 
   components: {
     SvgIcon,
@@ -188,91 +223,61 @@ export default {
 
   data() {
     return {
-      first_name: '',
-      last_name: '',
-      address: '',
-      email: '',
-      school: '',
-      mobile: '',
-      al_year: '',
-      gender: '',
-      password: '',
-      res: '',
-      bgHeight: '',
-      registrationPageBanner: '',
-    }
+      first_name: "",
+      last_name: "",
+      address: "",
+      email: "",
+      school: "",
+      mobile: "",
+      al_year: "",
+      gender: "",
+      password: "",
+      res: "",
+      bgHeight: "",
+    };
   },
 
   computed: {
     availableALYears() {
-      const currentYear = new Date().getFullYear()
-      return [currentYear, currentYear + 1, currentYear + 2]
+      const currentYear = new Date().getFullYear();
+      return [currentYear, currentYear + 1, currentYear + 2];
     },
-
-    registrationBannerUrl() {
-      if (!this.registrationPageBanner.length) {
-        return ''
-      }
-
-      return this.registrationPageBanner.filter(
-        (i) => i.banner_type === 'registration'
-      )[0].url
-    },
-  },
-
-  created() {
-   
-   this.showNotification('error', 'Something went wrong!')
-
-    this.fetchRegistrationPageBanner()
   },
 
   methods: {
-    async fetchRegistrationPageBanner() {
-      try {
-        const { data } = await this.$axios.get('content/' + 'banner')
-
-        if (data) {
-          this.registrationPageBanner = data.data
-        }
-      } catch (e) {
-        this.showNotification('error', 'Something went wrong!')
-      }
-    },
-
     showNotification(type, text) {
       this.$notify({
         type,
-        group: 'foo',
-        title: type === 'success' ? 'Success' : 'Error!',
+        group: "foo",
+        title: type === "success" ? "Success" : "Error!",
         text,
-        position: 'top right',
-      })
+        position: "top right",
+      });
     },
 
     async handleSignUpClick() {
       if (!(await this.$refs.signupForm.validate())) {
-        this.showNotification('error', 'Please fill required fields.')
-        return false
+        this.showNotification("error", "Please fill required fields.");
+        return false;
       }
 
       if (!this.al_year) {
-        this.showNotification('error', 'Please select A/L year.')
-        return false
+        this.showNotification("error", "Please select A/L year.");
+        return false;
       }
 
       if (!this.gender) {
-        this.showNotification('error', 'Please select your gender.')
-        return false
+        this.showNotification("error", "Please select your gender.");
+        return false;
       }
 
       if (this.mobile.length !== 10) {
-        this.showNotification('error', 'Invalid mobile number.')
-        return false
+        this.showNotification("error", "Invalid mobile number.");
+        return false;
       }
 
       try {
-        await this.$axios.post('user/signup', {
+        await this.$axios.post("user/signup", {
           first_name: this.first_name,
           last_name: this.last_name,
           address: this.address,
@@ -282,21 +287,21 @@ export default {
           al_year: this.al_year,
           gender: this.gender,
           password: this.password,
-        })
+        });
 
-        return this.$router.push('success')
+        return this.$router.push("success");
       } catch (e) {
-        this.res = e.response.data.message
+        this.res = e.response.data.message;
 
-        if (e.response.data.status === 'success') {
-          this.showNotification('success', this.res)
+        if (e.response.data.status === "success") {
+          this.showNotification("success", this.res);
         } else {
-          this.showNotification('error', this.res)
+          this.showNotification("error", this.res);
         }
       }
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -346,7 +351,7 @@ export default {
 }
 
 .background-image {
-  background-image: url('../../assets/images/Background.jpg');
+  background-image: url("../../assets/images/Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

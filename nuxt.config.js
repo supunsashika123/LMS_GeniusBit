@@ -31,10 +31,43 @@ export default {
   buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/eslint-module"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next"],
+
+  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
+  axios: {
+    baseURL: "http://localhost:4000",
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ["vee-validate/dist/rules"],
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: "data.token",
+          maxAge: 999999999,
+          // required: true,
+          // type: 'Bearer'
+        },
+        user: {
+          property: "user",
+          // autoFetch: true
+        },
+        endpoints: {
+          login: { url: "user/signIn", method: "post" },
+          user: { url: "user/", method: "get" },
+          logout: { url: "user/logout", method: "get" },
+        },
+      },
+    },
+    redirect: {
+      login: "/",
+      logout: "/",
+      callback: false,
+      home: "/home",
+    },
   },
 };
