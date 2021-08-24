@@ -11,7 +11,23 @@
         :readonly="disabled"
         :type="type"
         :class="dynamicInputStyling"
-        class="appearance-none block h-10 w-full px-2 border border-gray-800 rounded-lg placeholder-gray-400 focus:outline-none focus:outline-blue transition duration-150 ease-in-out text-sm sm:leading-5 font-medium"
+        class="
+          appearance-none
+          block
+          h-10
+          w-full
+          px-2
+          border border-gray-800
+          rounded-lg
+          placeholder-gray-400
+          focus:outline-none focus:outline-blue
+          transition
+          duration-150
+          ease-in-out
+          text-sm
+          sm:leading-5
+          font-medium
+        "
       />
     </div>
     <div v-if="errors.length" class="text-coral-600 font-normal text-xs">
@@ -21,17 +37,17 @@
 </template>
 
 <script>
-import { ValidationProvider } from 'vee-validate'
+import { ValidationProvider } from "vee-validate";
 
 export default {
-  name: 'TextField',
+  name: "TextField",
 
   components: { ValidationProvider },
 
   props: {
     type: {
       type: String,
-      default: 'text',
+      default: "text",
     },
     placeholder: {
       type: String,
@@ -47,7 +63,7 @@ export default {
     },
     value: {
       type: [String, Number],
-      default: '',
+      default: "",
     },
     disabled: {
       type: Boolean,
@@ -55,11 +71,11 @@ export default {
     },
     rules: {
       type: [String, Object],
-      default: '',
+      default: "",
     },
     name: {
       type: String,
-      default: '',
+      default: "",
     },
   },
 
@@ -67,33 +83,33 @@ export default {
     return {
       showPassword: false,
       localValue: this.value,
-    }
+    };
   },
 
   computed: {
     dynamicInputStyling() {
       if (this.disabled) {
-        return ['border-gray-800', 'border-opacity-75', 'text-gray-800']
+        return ["border-gray-800", "border-opacity-75", "text-gray-800"];
       }
 
-      return ['border-gray-300', 'focus:border-purple-800']
+      return ["border-gray-300", "focus:border-purple-800"];
     },
   },
 
   watch: {
     value(newText) {
-      this.localValue = newText
+      this.localValue = newText;
     },
 
     localValue(newText) {
-      this.$emit('input', newText)
+      this.$emit("input", newText);
     },
   },
-}
+};
 </script>
 
 <style>
 .icon-color {
-  fill: theme('colors.gray.600');
+  fill: theme("colors.gray.600");
 }
 </style>

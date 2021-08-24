@@ -1,6 +1,17 @@
 <template>
   <div
-    class="h-screen w-56 bg-white border-r box-border absolute left-0 fixed px-4 py-12"
+    class="
+      h-screen
+      w-56
+      bg-white
+      border-r
+      box-border
+      absolute
+      left-0
+      fixed
+      px-4
+      py-12
+    "
   >
     <div class="pt-16">
       <div class="xl:mt-5">
@@ -19,10 +30,10 @@
 </template>
 
 <script>
-import SidebarMenuItem from '~/components/sidebar/SidebarMenuItem'
+import SidebarMenuItem from "~/components/sidebar/SidebarMenuItem";
 
 export default {
-  name: 'Sidebar',
+  name: "Sidebar",
 
   components: { SidebarMenuItem },
 
@@ -42,33 +53,31 @@ export default {
       isShowing: false,
       routes: [
         {
-          value: '/home',
-          display: 'Home',
-          icon: 'home',
+          value: "/home",
+          display: "Home",
+          icon: "home",
         },
         {
-          value: '/online-classes',
-          display: 'Online Classes',
-          icon: 'online-teaching',
+          value: "/online-classes",
+          display: "Online Classes",
+          icon: "online-teaching",
         },
         {
-          value: '/documents',
-          display: 'Documents',
-          icon: 'document',
+          value: "/documents",
+          display: "Documents",
+          icon: "document",
         },
-
-
       ],
-    }
+    };
   },
 
   methods: {
     checkIsMenuActive(route) {
-      const currentUrl = this.$nuxt.$route.path.split('/')[1]
-      return route.value === '/' + currentUrl
+      const currentUrl = this.$nuxt.$route.path.split("/")[1];
+      return route.value === "/" + currentUrl;
     },
   },
-}
+};
 </script>
 
 <style scoped>
