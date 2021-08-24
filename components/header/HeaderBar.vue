@@ -7,11 +7,7 @@
       <div class="flex flex-row items-center">
         <NuxtLink to="student-info">
           <div class="h-8 w-8 rounded-full bg-white sm:hidden">
-            <SvgIcon
-              name="profile"
-              class="h-8 w-8"
-            />
-            
+            <SvgIcon name="profile" class="h-8 w-8" />
           </div>
         </NuxtLink>
         <div class="sm:hidden">
@@ -25,7 +21,13 @@
         <div class="text-sm sm:hidden">
           <NuxtLink to="home" @click.native="showMobileMenu = false">
             <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
+              class="
+                block
+                text-base text-white
+                mt-4
+                hover:text-white
+                text-center
+              "
               @click="toggleMenu"
             >
               Home
@@ -33,7 +35,13 @@
           </NuxtLink>
           <NuxtLink to="online-classes" @click.native="showMobileMenu = false">
             <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
+              class="
+                block
+                text-base text-white
+                mt-4
+                hover:text-white
+                text-center
+              "
               @click="toggleMenu"
             >
               Online Classes
@@ -41,7 +49,13 @@
           </NuxtLink>
           <NuxtLink to="documents" @click.native="showMobileMenu = false">
             <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
+              class="
+                block
+                text-base text-white
+                mt-4
+                hover:text-white
+                text-center
+              "
               @click="toggleMenu"
             >
               Documents
@@ -49,7 +63,13 @@
           </NuxtLink>
           <NuxtLink to="live-classes" @click.native="showMobileMenu = false">
             <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
+              class="
+                block
+                text-base text-white
+                mt-4
+                hover:text-white
+                text-center
+              "
               @click="toggleMenu"
             >
               Live Classes
@@ -57,7 +77,13 @@
           </NuxtLink>
           <NuxtLink to="gallery" @click.native="showMobileMenu = false">
             <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
+              class="
+                block
+                text-base text-white
+                mt-4
+                hover:text-white
+                text-center
+              "
               @click="toggleMenu"
             >
               Gallery
@@ -65,7 +91,13 @@
           </NuxtLink>
           <NuxtLink to="/online-quiz" @click.native="showMobileMenu = false">
             <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
+              class="
+                block
+                text-base text-white
+                mt-4
+                hover:text-white
+                text-center
+              "
               @click="toggleMenu"
             >
               Online Quizzes
@@ -73,14 +105,28 @@
           </NuxtLink>
           <NuxtLink to="/papers" @click.native="showMobileMenu = false">
             <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
+              class="
+                block
+                text-base text-white
+                mt-4
+                hover:text-white
+                text-center
+              "
               @click="toggleMenu"
             >
               Papers
             </div>
           </NuxtLink>
           <div
-            class="block text-base text-white mt-4 cursor-pointer hover:text-white text-center font-bold"
+            class="
+              block
+              text-base text-white
+              mt-4
+              cursor-pointer
+              hover:text-white
+              text-center
+              font-bold
+            "
             @click="handleLogoutButtonPress"
           >
             Logout
@@ -92,14 +138,19 @@
               <NuxtLink to="student-info">
                 <div class="flex flex-row items-center">
                   <div class="h-8 w-8 rounded-full">
-                    <SvgIcon
-                      name="profile"
-                      class="h-8 w-8"
-                    />
-                    
+                    <SvgIcon name="profile" class="h-8 w-8" />
                   </div>
                   <div
-                    class="font-bold cursor-pointer text-sm px-4 text-white mt-4 sm:mt-0 text-center"
+                    class="
+                      font-bold
+                      cursor-pointer
+                      text-sm
+                      px-4
+                      text-white
+                      mt-4
+                      sm:mt-0
+                      text-center
+                    "
                   >
                     Test
                   </div>
@@ -120,25 +171,25 @@
 </template>
 
 <script>
-import SvgIcon from '@/components/SvgIcon'
-import MenuToggleButton from '@/components/buttons/MenuToggleButton'
+import SvgIcon from "@/components/SvgIcon";
+import MenuToggleButton from "@/components/buttons/MenuToggleButton";
 export default {
-  name: 'HeaderBar',
+  name: "HeaderBar",
 
   components: { MenuToggleButton, SvgIcon },
 
-  layout: 'dashboard',
+  layout: "dashboard",
 
   data() {
     return {
       open: false,
       showMobileMenu: false,
-    }
+    };
   },
 
   watch: {
     showMobileMenu(newValue) {
-      this.open = newValue
+      this.open = newValue;
     },
   },
 
@@ -147,22 +198,22 @@ export default {
       this.$confirm({
         message: `Are you sure want to logout?`,
         button: {
-          no: 'No',
-          yes: 'Logout',
+          no: "No",
+          yes: "Logout",
         },
         callback: (confirm) => {
           if (confirm) {
-            this.$auth.logout()
+            this.$auth.logout();
           }
         },
-      })
+      });
     },
 
     toggleMenu() {
-      this.open = false
+      this.open = false;
     },
   },
-}
+};
 </script>
 
 <style scoped></style>

@@ -5,13 +5,13 @@
 </template>
 <script>
 const files = require.context(
-  '!svg-sprite-loader!./../assets/icons',
+  "!svg-sprite-loader!./../assets/icons",
   false,
   /.*\.svg$/
-)
-files.keys().forEach(files)
+);
+files.keys().forEach(files);
 export default {
-  name: 'SvgIcon',
+  name: "SvgIcon",
 
   props: {
     name: {
@@ -19,7 +19,7 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 <style scoped>
 .icon {

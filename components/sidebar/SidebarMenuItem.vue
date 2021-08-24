@@ -25,15 +25,15 @@
 </template>
 
 <script>
-import SvgIcon from '~/components/SvgIcon'
+import SvgIcon from "~/components/SvgIcon";
 export default {
-  name: 'SidebarMenuItem',
+  name: "SidebarMenuItem",
   components: { SvgIcon },
   props: {
     routeName: {
       type: String,
       required: true,
-      default: '',
+      default: "",
     },
     name: {
       type: String,
@@ -48,7 +48,7 @@ export default {
       default: false,
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -57,17 +57,17 @@ export default {
 }
 
 .icon-color {
-  fill: theme('colors.gray.800');
-  stroke: theme('colors.gray.700');
+  fill: theme("colors.gray.800");
+  stroke: theme("colors.gray.700");
 }
 .active-svg {
-  fill: theme('colors.red');
-  color: theme('colors.red');
-  stroke: theme('colors.red');
+  fill: theme("colors.red");
+  color: theme("colors.red");
+  stroke: theme("colors.red");
 }
 .wrapper:hover .hover-effect {
-  fill: theme('colors.purple.800');
-  color: theme('colors.purple.800');
-  stroke: theme('colors.purple.800');
+  fill: theme("colors.purple.800");
+  color: theme("colors.purple.800");
+  stroke: theme("colors.purple.800");
 }
 </style>

@@ -9,8 +9,8 @@
 
 <script>
 export default {
-  name: 'LoadingSpinner',
-}
+  name: "LoadingSpinner",
+};
 </script>
 
 <style>
