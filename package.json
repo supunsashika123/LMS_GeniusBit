@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "node server.js",
+    "start": "nuxt",
     "generate": "nuxt generate",
     "postinstall": "npm run build",
     "start-host": "node server.js"
