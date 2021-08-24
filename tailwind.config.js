@@ -51,8 +51,9 @@ module.exports = {
       '6xl': '2.875rem', // 46px
     },
     colors: {
+      pink:'#EBE5E5',
       transparent: 'transparent',
-      black: '#000000',
+      black: '#001122',
       red: '#DC0000',
       gray: {
         900: '#191919',

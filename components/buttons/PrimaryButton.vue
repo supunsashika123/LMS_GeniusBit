@@ -40,7 +40,7 @@ export default {
         return ['bg-gray-400', 'border-opacity-75', 'text-gray-800']
       }
 
-      return ['bg-red', 'focus:border-purple-800 hover:bg-green-700']
+      return ['bg-black', 'focus:border-purple-800 hover:bg-green-700']
     },
   },
 }

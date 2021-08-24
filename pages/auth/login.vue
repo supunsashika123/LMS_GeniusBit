@@ -6,19 +6,23 @@
     }"
   >
     <div class="bg-white w-full h-screen card-size sm:flex">
-      <div class="w-1/3 flex items-center hidden lg:block my-auto">
-        <img
-          class="side-banner-image-styles flex items-center p-4"
-          :src="loginBannerUrl"
-        />
+      <div class="w-1/3 flex items-center hidden lg:flex bg-pink" style="border-radius: 32px;">
+        <div class="my-auto">
+          <img
+            class="side-banner-image-styles flex items-center p-4"
+            src="~/assets/images/banner-image.jpg"
+          />
+        </div>
       </div>
       <div class="w-full md:w-1/2 lg:w-1/3 border-l-2 border-fuchsia-600">
         <div class="login-form py-6 px-4 sm:py-12 lg:px-12">
           <div class="sm:hidden text-center pb-6">
             <div class="hidden div-height logo-position hide-logo-mobile">
-              <SvgIcon
-                name="logo-red"
+              <img
                 class="hidden icon-fill icon-size my-4"
+                src="~/assets/images/logo.jpg"
+                alt=""
+                style="width: 150px"
               />
             </div>
           </div>
@@ -52,7 +56,7 @@
             <div class="font-normal text-xs pt-4 text-center">
               Still don’t have an account?
             </div>
-            <NuxtLink to="auth/registration">
+            <NuxtLink to="/auth/registration">
               <SecondaryButton text="Register" class="mt-4" />
             </NuxtLink>
           </ValidationObserver>
@@ -60,7 +64,11 @@
       </div>
       <div class="w-full md:w-1/2 lg:w-1/3 px-6 py-8">
         <div class="hide-logo-web logo-position">
-          <SvgIcon name="logo-red" class="hide-logo-web icon-fill h-24 w-32" />
+          <img
+            class="hide-logo-web icon-fill w-32"
+            src="~/assets/images/logo.jpg"
+            alt=""
+          />
         </div>
         <div class="sm:mt-6">
           <div class="text-center sm:text-left text-base text-black font-bold">
@@ -94,7 +102,7 @@
 
 <style scoped>
 .background-image {
-  background-image: url('../../assets/images/Background.jpg');
+  background-image: url("../../assets/images/Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -109,7 +117,7 @@
 }
 
 .icon-fill {
-  fill: red;
+  fill: 'black';
 }
 
 .logo-position {
@@ -155,12 +163,12 @@
 }
 </style>
 <script>
-import PrimaryButton from '@/components/buttons/PrimaryButton'
-import SecondaryButton from '@/components/buttons/SecondaryButton'
-import TextField from '@/components/TextField'
-import { ValidationObserver } from 'vee-validate'
-import PasswordField from '@/components/PasswordField'
-import SvgIcon from '@/components/SvgIcon'
+import PrimaryButton from "@/components/buttons/PrimaryButton";
+import SecondaryButton from "@/components/buttons/SecondaryButton";
+import TextField from "@/components/TextField";
+import { ValidationObserver } from "vee-validate";
+import PasswordField from "@/components/PasswordField";
+import SvgIcon from "@/components/SvgIcon";
 
 export default {
   components: {
@@ -172,120 +180,93 @@ export default {
     ValidationObserver,
   },
 
-  middleware: 'guest',
+  middleware: "guest",
 
-  layout: 'authentication',
+  layout: "authentication",
 
   data() {
     return {
-      username: '',
-      password: '',
-      res: '',
-      bgHeight: '',
+      username: "",
+      password: "",
+      res: "",
+      bgHeight: "",
       loading: false,
-      loginPageBanner: '',
-    }
-  },
-
-  computed: {
-    loginBannerUrl() {
-      if (!this.loginPageBanner.length) {
-        return ''
-      }
-
-      return this.loginPageBanner.filter((i) => i.banner_type === 'login')[0]
-        .url
-    },
+    };
   },
 
   mounted() {
     if (this.$refs.whiteModal) {
-      const modalHeight = this.$refs.whiteModal.clientHeight
-      const bodyHeight = window.innerHeight
+      const modalHeight = this.$refs.whiteModal.clientHeight;
+      const bodyHeight = window.innerHeight;
 
       if (modalHeight <= bodyHeight) {
-        this.bgHeight = bodyHeight + 'px'
+        this.bgHeight = bodyHeight + "px";
       } else {
-        this.bgHeight = modalHeight + +100 + 'px'
+        this.bgHeight = modalHeight + +100 + "px";
       }
     }
   },
 
-  created() {
-    this.fetchLoginPageBanner()
-  },
-
   methods: {
-    async fetchLoginPageBanner() {
-      try {
-        const { data } = await this.$axios.get('content/' + 'banner')
-
-        if (data) {
-          this.loginPageBanner = data.data
-        }
-      } catch (e) {
-        this.showNotification('error', 'Something went wrong!')
-      }
-    },
-
     showForgotPasswordMessage() {
       this.$notify({
-        group: 'foo',
-        title: 'Nothing to worry !',
-        text: 'Please contact admin',
-        position: 'top right',
-        width: '800px',
-      })
+        group: "foo",
+        title: "Nothing to worry !",
+        text: "Please contact admin",
+        position: "top right",
+        width: "800px",
+      });
     },
 
     showNotification(type, text) {
       this.$notify({
         type,
-        group: 'foo',
-        title: type === 'success' ? 'Success' : 'Error!',
+        group: "foo",
+        title: type === "success" ? "Success" : "Error!",
         text,
-        position: 'top right',
-        width: '800px',
-      })
+        position: "top right",
+        width: "800px",
+      });
     },
 
     async handleLoginClick() {
       if (!(await this.$refs.loginForm.validate())) {
-        this.showNotification('error', 'Please fill required fields.')
-        return false
+        this.showNotification("error", "Please fill required fields.");
+        return false;
       }
 
       try {
-        this.loading = true
-        const { data } = await this.$auth.loginWith('local', {
+        this.loading = true;
+        const { data } = await this.$auth.loginWith("local", {
           data: {
             username: this.username,
             password: this.password,
           },
-        })
+        });
 
-        if (data.status === 'failed') {
-          this.loading = false
-          this.showNotification('error', data.message)
-          return false
+        if (data.status === "failed") {
+          this.loading = false;
+          this.showNotification("error", data.message);
+          return false;
         }
 
         const path =
-          data.data.user.type === 'admin' ? '/admin/students' : '/home'
+          data.data.user.type === "admin" ? "/admin/students" : "/home";
 
         return this.$router.push({
           path,
-        })
+        });
       } catch (e) {
-        this.loading = false
+        console.log(e);
+        this.loading = false;
         this.showNotification(
-          'error',
+          "error",
           e.response && e.response.data.message
             ? e.response.data.message
-            : 'Invalid credentials!'
-        )
+            : "Invalid credentials!"
+        );
       }
     },
   },
-}
+};
 </script>

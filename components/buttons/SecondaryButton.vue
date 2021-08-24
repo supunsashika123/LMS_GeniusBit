@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[dynamicButtonStyling]"
-    class="button-height w-full bg-white border-2 border-red text-red font-bold text-base flex justify-center items-center cursor-pointer rounded-lg mt-2"
+    class="button-height w-full bg-white border-2 border-black text-black font-bold text-base flex justify-center items-center cursor-pointer rounded-lg mt-2"
     @click="$emit('click')"
   >
     {{ text }}
