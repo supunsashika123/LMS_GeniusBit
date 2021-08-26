@@ -6,9 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "postinstall": "npm run build",
-    "start": "node server.js",
-    "heroku-postbuild": "npm run build"
+    "start": "nuxt start"
   },
   "dependencies": {
     "@nuxt/content": "^1.9.0",
