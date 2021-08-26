@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
     "generate": "nuxt generate",
     "postinstall": "npm run build",
-    "start-host": "node server.js",
+    "start": "node server.js",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
