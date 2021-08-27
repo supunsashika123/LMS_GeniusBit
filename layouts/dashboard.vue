@@ -1,6 +1,6 @@
 <template>
   <div>
-       <notifications group="foo" />
+    <notifications group="foo" />
 
     <client-only></client-only>
     <HeaderBar />
@@ -16,33 +16,32 @@
 </template>
 
 <script>
-import HeaderBar from '@/components/header/HeaderBar'
-import FooterBar from '@/components/footer/FooterBar'
-import Sidebar from '@/components/sidebar/Sidebar'
+import HeaderBar from "@/components/header/HeaderBar";
+import FooterBar from "@/components/footer/FooterBar";
+import Sidebar from "@/components/sidebar/Sidebar";
 
 export default {
-  name: 'Dashboard',
-
+  name: "Dashboard",
 
   components: { Sidebar, FooterBar, HeaderBar },
 
   data() {
     return {
-      menuItems: ['Home', 'Online-Classes', 'Documents'],
+      menuItems: ["Home", "Online-Classes", "Documents"],
 
-      activeMenuItem: 'Home',
-    }
+      activeMenuItem: "Home",
+    };
   },
 
   methods: {
     handleMenuClick(route) {
-      this.activeMenuItem = route
+      this.activeMenuItem = route;
       this.$router.push({
-        path: '/' + route.toLowerCase(),
-      })
+        path: "/" + route.toLowerCase(),
+      });
     },
   },
-}
+};
 </script>
 
 <style scoped>

@@ -1,25 +1,19 @@
 <template>
   <div class="h-screen overflow-auto">
-    <div class="m-6">
-      Welcome Home!
-    </div>
+    <div class="m-6">Welcome Home!</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: "Home",
 
   components: {},
 
   data() {
-    return {
-
-    }
+    return {};
   },
 
-
-  layout: 'dashboard',
-
-}
+  layout: "dashboard",
+};
 </script>
