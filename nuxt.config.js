@@ -20,8 +20,11 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/vee-validate.js",
+    '~/plugins/vue-js-modal.js',
     { src: "~/plugins/notifications-ssr", mode: "server" },
     { src: "~/plugins/notifications-client", mode: "client" },
+    { src: '~plugins/vue-confirm-dialog.js', mode: 'client' },
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -31,7 +34,7 @@ export default {
   buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/eslint-module"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next", "nuxt-vue-multiselect"],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
