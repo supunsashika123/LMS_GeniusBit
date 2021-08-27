@@ -3,7 +3,10 @@
     class="background-image w-full flex items-center h-screen justify-center"
   >
     <div class="bg-white w-full h-screen card-size sm:flex">
-      <div class="w-1/3 flex items-center hidden lg:flex bg-pink" style="border-radius: 32px;">
+      <div
+        class="w-1/3 flex items-center hidden lg:flex bg-pink"
+        style="border-radius: 32px"
+      >
         <div class="my-auto">
           <img
             class="side-banner-image-styles flex items-center p-4"
