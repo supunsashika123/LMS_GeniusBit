@@ -23,7 +23,7 @@ export default {
     '~/plugins/vue-js-modal.js',
     { src: "~/plugins/notifications-ssr", mode: "server" },
     { src: "~/plugins/notifications-client", mode: "client" },
-    { src: '~plugins/vue-confirm-dialog.js', mode: 'client' },
+    { src: '~/plugins/vue-confirm-dialog.js', mode: 'client' },
 
   ],
 
@@ -38,7 +38,8 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: "https://geniusbitapi.herokuapp.com/",
+    // baseURL: "https://geniusbitapi.herokuapp.com/",
+    baseURL: "http://localhost:4000/",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -67,10 +68,10 @@ export default {
       },
     },
     redirect: {
-      login: "/",
-      logout: "/",
+      login: "/auth/login",
+      logout: "/auth/login",
       callback: false,
-      home: "/home",
+      home: "/",
     },
   },
 };

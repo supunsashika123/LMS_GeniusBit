@@ -1,8 +1,7 @@
 <template>
   <div>
     <notifications group="foo" />
-
-    <client-only></client-only>
+    <client-only><vue-confirm-dialog /></client-only>
     <HeaderBar />
     <Sidebar
       :active-menu="activeMenuItem"
