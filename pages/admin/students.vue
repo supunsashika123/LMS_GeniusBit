@@ -18,7 +18,14 @@
           </div>
           <ValidationObserver
             ref="editUserForm"
-            class="lg:mr-12 flex flex-col lg:flex-row pt-4 md:ml-4 overflow-auto"
+            class="
+              lg:mr-12
+              flex flex-col
+              lg:flex-row
+              pt-4
+              md:ml-4
+              overflow-auto
+            "
           >
             <div class="text-center lg:hidden">
               <div class="text-center">
@@ -106,12 +113,27 @@
               />
               <label
                 for="student-gender"
-                class="block text-2xs font-normal text-black text-left pt-4 mx-4 lg:mx-0 lg:mr-2"
+                class="
+                  block
+                  text-2xs
+                  font-normal
+                  text-black text-left
+                  pt-4
+                  mx-4
+                  lg:mx-0 lg:mr-2
+                "
               >
                 Gender
               </label>
               <div
-                class="py-2 mx-4 lg:mx-0 lg:mr-2 border border-gray-800 focus:outline-none rounded-lg"
+                class="
+                  py-2
+                  mx-4
+                  lg:mx-0 lg:mr-2
+                  border border-gray-800
+                  focus:outline-none
+                  rounded-lg
+                "
               >
                 <select
                   id="student-gender"
@@ -132,7 +154,16 @@
               <select
                 v-model="formFields.status"
                 :disabled="!isFormEditable"
-                class="border mt-1 h-10 w-full border-gray-800 focus:outline-none rounded-lg py-2"
+                class="
+                  border
+                  mt-1
+                  h-10
+                  w-full
+                  border-gray-800
+                  focus:outline-none
+                  rounded-lg
+                  py-2
+                "
               >
                 <option value="pending" disabled>Pending</option>
                 <option value="approved">Approved</option>
@@ -179,7 +210,26 @@
                       :disabled="
                         !isFormEditable || formFields.status !== 'approved'
                       "
-                      class="appearance-none w-full block w-full flex items-center h-10 px-2 border border-gray-800 rounded-lg placeholder-gray-400 focus:outline-none transition duration-150 ease-in-out text-sm sm:leading-5 font-medium"
+                      class="
+                        appearance-none
+                        w-full
+                        block
+                        w-full
+                        flex
+                        items-center
+                        h-10
+                        px-2
+                        border border-gray-800
+                        rounded-lg
+                        placeholder-gray-400
+                        focus:outline-none
+                        transition
+                        duration-150
+                        ease-in-out
+                        text-sm
+                        sm:leading-5
+                        font-medium
+                      "
                       placeholder="MM/DD/YYYY"
                   /></client-only>
                 </div>
@@ -196,7 +246,26 @@
                       :disabled="
                         !isFormEditable || formFields.status !== 'approved'
                       "
-                      class="appearance-none w-full block w-full flex items-center h-10 px-2 border border-gray-800 rounded-lg placeholder-gray-400 focus:outline-none transition duration-150 ease-in-out text-sm sm:leading-5 font-medium"
+                      class="
+                        appearance-none
+                        w-full
+                        block
+                        w-full
+                        flex
+                        items-center
+                        h-10
+                        px-2
+                        border border-gray-800
+                        rounded-lg
+                        placeholder-gray-400
+                        focus:outline-none
+                        transition
+                        duration-150
+                        ease-in-out
+                        text-sm
+                        sm:leading-5
+                        font-medium
+                      "
                       placeholder="MM/DD/YYYY"
                   /></client-only>
                 </div>
@@ -225,10 +294,23 @@
             </div>
           </ValidationObserver>
           <div
-            class="flex flex-col md:flex-row justify-center md:justify-between pt-4"
+            class="
+              flex flex-col
+              md:flex-row
+              justify-center
+              md:justify-between
+              pt-4
+            "
           >
             <div
-              class="flex flex-col-reverse md:flex-row justify-center items-center mb-4 md:ml-8"
+              class="
+                flex flex-col-reverse
+                md:flex-row
+                justify-center
+                items-center
+                mb-4
+                md:ml-8
+              "
             >
               <div class="mt-4 md:mt-0">
                 <PrimaryButton
@@ -259,7 +341,16 @@
               </div>
             </div>
             <div
-              class="flex flex justify-center flex-col md:flex-row mx-4 md:mt-4 lg:pr-12 pb-8"
+              class="
+                flex flex
+                justify-center
+                flex-col
+                md:flex-row
+                mx-4
+                md:mt-4
+                lg:pr-12
+                pb-8
+              "
             >
               <div>
                 <PrimaryButton
@@ -303,7 +394,14 @@
           </div>
           <ValidationObserver
             ref="editMultiUserForm"
-            class="lg:mr-12 flex flex-col lg:flex-row pt-4 md:ml-4 overflow-auto"
+            class="
+              lg:mr-12
+              flex flex-col
+              lg:flex-row
+              pt-4
+              md:ml-4
+              overflow-auto
+            "
           >
             <div class="w-full px-4">
               <div class="md:flex w-full">
@@ -315,7 +413,16 @@
                   </label>
                   <select
                     v-model="selectedUsersFormFields.status"
-                    class="border mt-1 h-10 w-full border-gray-800 focus:outline-none rounded-lg py-2"
+                    class="
+                      border
+                      mt-1
+                      h-10
+                      w-full
+                      border-gray-800
+                      focus:outline-none
+                      rounded-lg
+                      py-2
+                    "
                   >
                     <option value="" disabled>Select Option</option>
                     <option value="approved">Approved</option>
@@ -366,7 +473,26 @@
                         :disabled="
                           selectedUsersFormFields.status !== 'approved'
                         "
-                        class="appearance-none w-full block w-full flex items-center h-10 px-2 border border-gray-800 rounded-lg placeholder-gray-400 focus:outline-none transition duration-150 ease-in-out text-sm sm:leading-5 font-medium"
+                        class="
+                          appearance-none
+                          w-full
+                          block
+                          w-full
+                          flex
+                          items-center
+                          h-10
+                          px-2
+                          border border-gray-800
+                          rounded-lg
+                          placeholder-gray-400
+                          focus:outline-none
+                          transition
+                          duration-150
+                          ease-in-out
+                          text-sm
+                          sm:leading-5
+                          font-medium
+                        "
                         placeholder="MM/DD/YYYY"
                     /></client-only>
                   </div>
@@ -383,7 +509,26 @@
                         :disabled="
                           selectedUsersFormFields.status !== 'approved'
                         "
-                        class="appearance-none w-full block w-full flex items-center h-10 px-2 border border-gray-800 rounded-lg placeholder-gray-400 focus:outline-none transition duration-150 ease-in-out text-sm sm:leading-5 font-medium"
+                        class="
+                          appearance-none
+                          w-full
+                          block
+                          w-full
+                          flex
+                          items-center
+                          h-10
+                          px-2
+                          border border-gray-800
+                          rounded-lg
+                          placeholder-gray-400
+                          focus:outline-none
+                          transition
+                          duration-150
+                          ease-in-out
+                          text-sm
+                          sm:leading-5
+                          font-medium
+                        "
                         placeholder="MM/DD/YYYY"
                     /></client-only>
                   </div>
@@ -392,10 +537,25 @@
             </div>
           </ValidationObserver>
           <div
-            class="flex flex-col md:flex-row justify-center md:justify-between pt-4"
+            class="
+              flex flex-col
+              md:flex-row
+              justify-center
+              md:justify-between
+              pt-4
+            "
           >
             <div
-              class="flex flex justify-center flex-col md:flex-row mx-4 md:mt-4 lg:pr-12 pb-8"
+              class="
+                flex flex
+                justify-center
+                flex-col
+                md:flex-row
+                mx-4
+                md:mt-4
+                lg:pr-12
+                pb-8
+              "
             >
               <div>
                 <PrimaryButton
@@ -425,7 +585,16 @@
             </label>
             <select
               v-model="selectedUserType"
-              class="border mt-1 h-10 w-full border-gray-800 focus:outline-none rounded-lg py-2"
+              class="
+                border
+                mt-1
+                h-10
+                w-full
+                border-gray-800
+                focus:outline-none
+                rounded-lg
+                py-2
+              "
               name="type"
             >
               <option value="pending">Pending</option>
@@ -440,7 +609,16 @@
             </label>
             <select
               v-model="selectedUserYear"
-              class="border mt-1 h-10 w-full border-gray-800 focus:outline-none rounded-lg py-2"
+              class="
+                border
+                mt-1
+                h-10
+                w-full
+                border-gray-800
+                focus:outline-none
+                rounded-lg
+                py-2
+              "
               name="year"
             >
               <option
@@ -477,7 +655,15 @@
           </div>
         </div>
         <div
-          class="flex text-base text-gray-900 font-bold pt-3 pb-2 min-width overflow-x-auto"
+          class="
+            flex
+            text-base text-gray-900
+            font-bold
+            pt-3
+            pb-2
+            min-width
+            overflow-x-auto
+          "
         >
           <div class="w-3/12">
             <div>Name</div>
@@ -526,17 +712,17 @@
 </template>
 
 <script>
-import TextField from '@/components/TextField'
-import SvgIcon from '@/components/SvgIcon'
-import PrimaryButton from '@/components/buttons/PrimaryButton'
-import Multiselect from 'vue-multiselect'
-import { ValidationObserver } from 'vee-validate'
-import moment from 'moment'
-import PendingPageTableRow from '~/components/admin/pending-page/PendingPageTableRow'
-import SearchField from '~/components/SearchField'
+import TextField from "@/components/TextField";
+import SvgIcon from "@/components/SvgIcon";
+import PrimaryButton from "@/components/buttons/PrimaryButton";
+import Multiselect from "vue-multiselect";
+import { ValidationObserver } from "vee-validate";
+import moment from "moment";
+import PendingPageTableRow from "~/components/admin/pending-page/PendingPageTableRow";
+import SearchField from "~/components/SearchField";
 
 export default {
-  name: 'Students',
+  name: "Students",
 
   components: {
     ValidationObserver,
@@ -548,91 +734,91 @@ export default {
     PendingPageTableRow,
   },
 
-  layout: 'admin',
+  layout: "admin",
 
   data() {
     return {
-      searchTerm: '',
+      searchTerm: "",
       studentList: [],
       classesList: [],
-      prev_status: 'pending',
+      prev_status: "pending",
       formFields: {
-        first_name: '',
-        last_name: '',
-        email: '',
-        mobile: '',
-        username: '',
-        address: '',
-        school: '',
-        al_year: '',
-        gender: '',
+        first_name: "",
+        last_name: "",
+        email: "",
+        mobile: "",
+        username: "",
+        address: "",
+        school: "",
+        al_year: "",
+        gender: "",
         classes: [],
-        date_from: '',
-        date_to: '',
-        status: '',
+        date_from: "",
+        date_to: "",
+        status: "",
       },
       selectedUsersFormFields: {
-        status: '',
+        status: "",
         class_ids: [],
-        date_from: '',
-        date_to: '',
+        date_from: "",
+        date_to: "",
       },
       pageIndex: 1,
       pageCount: 0,
       isFormEditable: false,
       isLoading: false,
-      selectedUserType: 'pending',
+      selectedUserType: "pending",
       selectedUserYear: new Date().getFullYear(),
-      tableRowButtonText: '',
+      tableRowButtonText: "",
       showResetPasswordContainer: false,
-      newPassword: '',
+      newPassword: "",
       selectAll: false,
       selectedStudentsList: [],
       data: [],
-    }
+    };
   },
 
   computed: {
     isFromToDatesNullForSingleUser() {
       return (
-        (this.formFields.status === 'rejected' &&
-          this.prev_status === 'approved') ||
-        (this.formFields.status === 'rejected' &&
-          this.prev_status === 'pending') ||
-        (this.formFields.status === 'pending' &&
-          this.prev_status === 'pending') ||
-        (this.formFields.status === 'rejected' &&
-          this.prev_status === 'rejected')
-      )
+        (this.formFields.status === "rejected" &&
+          this.prev_status === "approved") ||
+        (this.formFields.status === "rejected" &&
+          this.prev_status === "pending") ||
+        (this.formFields.status === "pending" &&
+          this.prev_status === "pending") ||
+        (this.formFields.status === "rejected" &&
+          this.prev_status === "rejected")
+      );
     },
 
     isFromToDatesNullForMultiUsers() {
       return (
-        (this.selectedUsersFormFields.status === 'rejected' &&
-          this.prev_status === 'approved') ||
-        (this.selectedUsersFormFields.status === 'rejected' &&
-          this.prev_status === 'pending') ||
-        (this.selectedUsersFormFields.status === 'rejected' &&
-          this.prev_status === 'expired')
-      )
+        (this.selectedUsersFormFields.status === "rejected" &&
+          this.prev_status === "approved") ||
+        (this.selectedUsersFormFields.status === "rejected" &&
+          this.prev_status === "pending") ||
+        (this.selectedUsersFormFields.status === "rejected" &&
+          this.prev_status === "expired")
+      );
     },
 
     isClassIdsNull() {
       return (
-        (this.selectedUsersFormFields.status === 'approved' &&
-          this.prev_status === 'approved') ||
-        (this.selectedUsersFormFields.status === 'rejected' &&
-          this.prev_status === 'approved') ||
-        (this.selectedUsersFormFields.status === 'approved' &&
-          this.prev_status === 'expired') ||
-        (this.selectedUsersFormFields.status === 'rejected' &&
-          this.prev_status === 'expired')
-      )
+        (this.selectedUsersFormFields.status === "approved" &&
+          this.prev_status === "approved") ||
+        (this.selectedUsersFormFields.status === "rejected" &&
+          this.prev_status === "approved") ||
+        (this.selectedUsersFormFields.status === "approved" &&
+          this.prev_status === "expired") ||
+        (this.selectedUsersFormFields.status === "rejected" &&
+          this.prev_status === "expired")
+      );
     },
 
     availableALYears() {
-      const currentYear = new Date().getFullYear()
-      return [currentYear, currentYear + 1, currentYear + 2]
+      const currentYear = new Date().getFullYear();
+      return [currentYear, currentYear + 1, currentYear + 2];
     },
   },
 
@@ -640,104 +826,104 @@ export default {
     selectAll(newValue) {
       this.studentList = this.studentList.map((s) => {
         if (newValue) {
-          this.selectedStudentsList.push(s.id)
+          this.selectedStudentsList.push(s.id);
         } else {
           this.selectedStudentsList = this.selectedStudentsList.filter(
             (studentId) => studentId !== s.id
-          )
+          );
         }
 
         return {
           ...s,
           checked: newValue,
-        }
-      })
+        };
+      });
     },
   },
 
   created() {
-    this.fetchUsers()
-    this.fetchClasses()
+    this.fetchUsers();
+    this.fetchClasses();
   },
 
   methods: {
     selectedStudents(isChecked, student) {
       if (isChecked) {
-        this.selectedStudentsList.push(student.id)
-        student.checked = true
+        this.selectedStudentsList.push(student.id);
+        student.checked = true;
       } else {
         this.selectedStudentsList = this.selectedStudentsList.filter(
           (studentId) => studentId !== student.id
-        )
-        student.checked = false
+        );
+        student.checked = false;
       }
     },
 
     async handleSelectedStudentModalSaveButtonClick() {
       if (!(await this.$refs.editMultiUserForm.validate())) {
-        this.showNotification('error', 'Please fill required fields.')
-        return false
+        this.showNotification("error", "Please fill required fields.");
+        return false;
       }
 
       if (
         !this.selectedUsersFormFields.status &&
-        this.selectedUsersFormFields.status === 'approved'
+        this.selectedUsersFormFields.status === "approved"
       ) {
-        this.showNotification('error', 'Please select status of students.')
-        return false
+        this.showNotification("error", "Please select status of students.");
+        return false;
       }
 
       if (
         !this.selectedUsersFormFields.date_from &&
-        this.selectedUsersFormFields.status === 'approved'
+        this.selectedUsersFormFields.status === "approved"
       ) {
-        this.showNotification('error', 'Please add start date for students.')
-        return false
+        this.showNotification("error", "Please add start date for students.");
+        return false;
       }
 
       if (
         !this.selectedUsersFormFields.date_to &&
-        this.selectedUsersFormFields.status === 'approved'
+        this.selectedUsersFormFields.status === "approved"
       ) {
         this.showNotification(
-          'error',
-          'Please add expiration date for students.'
-        )
-        return false
+          "error",
+          "Please add expiration date for students."
+        );
+        return false;
       }
 
       if (
         !this.selectedUsersFormFields.class_ids.length &&
-        this.selectedUsersFormFields.status === 'approved' &&
-        (this.prev_status === 'pending' || this.prev_status === 'rejected')
+        this.selectedUsersFormFields.status === "approved" &&
+        (this.prev_status === "pending" || this.prev_status === "rejected")
       ) {
-        this.showNotification('error', 'Please add classes for students.')
-        return false
+        this.showNotification("error", "Please add classes for students.");
+        return false;
       }
 
       await this.updateSelectedUserInfo(
         this.selectedUsersFormFields._id,
         this.selectedUsersFormFields
-      )
+      );
 
       // reset modal
       this.selectedUsersFormFields = {
-        status: '',
+        status: "",
         class_ids: [],
-        date_from: '',
-        date_to: '',
-      }
+        date_from: "",
+        date_to: "",
+      };
 
-      this.clearSelection()
+      this.clearSelection();
 
-      this.$modal.hide('multi-user-actions-modal')
+      this.$modal.hide("multi-user-actions-modal");
     },
 
     async updateSelectedUserInfo(studentId, payload) {
       try {
-        this.isLoading = true
+        this.isLoading = true;
 
-        await this.$axios.put('user/updateMultiple/', {
+        await this.$axios.put("user/updateMultiple/", {
           data: {
             status: this.selectedUsersFormFields.status,
             class_ids: this.isClassIdsNull
@@ -752,165 +938,165 @@ export default {
           },
           prev_status: this.prev_status,
           student_ids: this.selectedStudentsList,
-        })
+        });
 
-        this.isLoading = false
+        this.isLoading = false;
 
-        await this.fetchUsers()
+        await this.fetchUsers();
 
         this.$notify({
-          type: 'success',
-          group: 'foo',
-          title: 'User updated successfully!',
-          text: 'Action successful!',
-          position: 'top right',
-        })
+          type: "success",
+          group: "foo",
+          title: "User updated successfully!",
+          text: "Action successful!",
+          position: "top right",
+        });
 
-        this.closeStudentModal()
+        this.closeStudentModal();
       } catch (e) {
         this.$notify({
-          type: 'error',
-          group: 'foo',
-          title: 'Form error!',
+          type: "error",
+          group: "foo",
+          title: "Form error!",
           text:
             e.response.data.message ??
-            'Something went wrong when updating users!',
-          position: 'top right',
-        })
+            "Something went wrong when updating users!",
+          position: "top right",
+        });
       }
     },
 
     showMultiUserActionsModal() {
-      this.$modal.show('multi-user-actions-modal')
+      this.$modal.show("multi-user-actions-modal");
     },
 
     resetSelectedUser() {
       this.formFields = {
-        first_name: '',
-        last_name: '',
-        email: '',
-        mobile: '',
-        username: '',
-        address: '',
-        school: '',
-        al_year: '',
-        gender: '',
+        first_name: "",
+        last_name: "",
+        email: "",
+        mobile: "",
+        username: "",
+        address: "",
+        school: "",
+        al_year: "",
+        gender: "",
         classes: [],
-        date_from: '',
-        date_to: '',
-        status: '',
-      }
+        date_from: "",
+        date_to: "",
+        status: "",
+      };
     },
 
     clearSelection() {
-      this.selectedStudentsList = []
-      this.selectAll = false
-      this.prev_status = this.selectedUserType
+      this.selectedStudentsList = [];
+      this.selectAll = false;
+      this.prev_status = this.selectedUserType;
 
       this.studentList = this.studentList.map((s) => {
-        return { ...s, checked: false }
-      })
+        return { ...s, checked: false };
+      });
     },
 
     handleFilterButtonClick() {
-      this.pageIndex = 1
+      this.pageIndex = 1;
 
-      this.clearSelection()
-      this.fetchUsers()
+      this.clearSelection();
+      this.fetchUsers();
     },
 
     capitalizeFirstLetter(text) {
-      return text.charAt(0).toUpperCase() + text.slice(1)
+      return text.charAt(0).toUpperCase() + text.slice(1);
     },
 
     changePage(pageNumber = 1) {
-      this.pageIndex = pageNumber
+      this.pageIndex = pageNumber;
 
-      this.fetchUsers()
+      this.fetchUsers();
     },
 
     showNotification(type, text) {
       this.$notify({
         type,
-        group: 'foo',
-        title: type === 'success' ? 'Success' : 'Error!',
+        group: "foo",
+        title: type === "success" ? "Success" : "Error!",
         text,
-        position: 'top right',
-      })
+        position: "top right",
+      });
     },
 
     handleResetPasswordButtonClick() {
       if (this.showResetPasswordContainer) {
         if (!this.newPassword) {
-          this.showNotification('error', 'Please enter new password.')
-          return false
+          this.showNotification("error", "Please enter new password.");
+          return false;
         }
 
-        this.resetPassword()
+        this.resetPassword();
       }
 
-      this.showResetPasswordContainer = !this.showResetPasswordContainer
+      this.showResetPasswordContainer = !this.showResetPasswordContainer;
     },
 
     async resetPassword() {
       if (!this.newPassword) {
-        this.showNotification('error', 'Please enter new password.')
-        return false
+        this.showNotification("error", "Please enter new password.");
+        return false;
       }
 
-      this.isLoading = true
+      this.isLoading = true;
 
       try {
-        await this.$axios.put('user/reset-password', {
+        await this.$axios.put("user/reset-password", {
           new_pw: this.newPassword,
           user_id: this.formFields._id,
-        })
+        });
 
-        this.showNotification('success', 'Reset Password successfully!')
+        this.showNotification("success", "Reset Password successfully!");
 
-        this.newPassword = ''
+        this.newPassword = "";
 
-        this.isLoading = false
+        this.isLoading = false;
       } catch (e) {
-        this.isLoading = false
+        this.isLoading = false;
 
         this.$notify({
-          type: 'error',
-          group: 'foo',
-          title: 'Form error!',
-          text: e.response.data.message ?? 'Reset password error!',
-          position: 'top right',
-        })
+          type: "error",
+          group: "foo",
+          title: "Form error!",
+          text: e.response.data.message ?? "Reset password error!",
+          position: "top right",
+        });
       }
     },
 
     async handleSearchTextChange(query) {
-      this.searchTerm = query
-      this.pageIndex = 1
+      this.searchTerm = query;
+      this.pageIndex = 1;
 
-      await this.fetchUsers()
+      await this.fetchUsers();
     },
 
     convertToYyyyMmDd(date) {
-      const d = new Date(date)
-      let month = '' + (d.getMonth() + 1)
-      let day = '' + d.getDate()
-      const year = d.getFullYear()
+      const d = new Date(date);
+      let month = "" + (d.getMonth() + 1);
+      let day = "" + d.getDate();
+      const year = d.getFullYear();
 
-      if (month.length < 2) month = '0' + month
-      if (day.length < 2) day = '0' + day
+      if (month.length < 2) month = "0" + month;
+      if (day.length < 2) day = "0" + day;
 
-      return [year, month, day].join('-')
+      return [year, month, day].join("-");
     },
 
     async updateUserInfo(studentId, payload) {
       try {
-        this.isLoading = true
+        this.isLoading = true;
 
-        const formData = new FormData()
+        const formData = new FormData();
 
         formData.append(
-          'payload',
+          "payload",
           JSON.stringify({
             ...payload,
             class_ids: payload.classes.map((c) => c.id),
@@ -922,164 +1108,164 @@ export default {
               : moment.utc(payload.date_to),
             prev_status: this.prev_status,
           })
-        )
+        );
 
-        await this.$axios.put('user/' + studentId, formData, {
+        await this.$axios.put("user/" + studentId, formData, {
           headers: {
-            'Content-Type': 'multipart/form-data',
+            "Content-Type": "multipart/form-data",
           },
-        })
+        });
 
-        this.isLoading = false
+        this.isLoading = false;
 
-        await this.fetchUsers()
+        await this.fetchUsers();
 
         this.$notify({
-          type: 'success',
-          group: 'foo',
-          title: 'User updated successfully!',
-          text: 'Action successful!',
-          position: 'top right',
-        })
+          type: "success",
+          group: "foo",
+          title: "User updated successfully!",
+          text: "Action successful!",
+          position: "top right",
+        });
 
-        this.closeStudentModal()
+        this.closeStudentModal();
       } catch (e) {
         this.$notify({
-          type: 'error',
-          group: 'foo',
-          title: 'Form error!',
+          type: "error",
+          group: "foo",
+          title: "Form error!",
           text:
             e.response.data.message ??
-            'Something went wrong when updating user!',
-          position: 'top right',
-        })
+            "Something went wrong when updating user!",
+          position: "top right",
+        });
       }
     },
 
     async fetchUsers() {
       try {
-        this.isLoading = true
+        this.isLoading = true;
 
-        const { data } = await this.$axios.get('user/getFiltered', {
+        const { data } = await this.$axios.get("user/getFiltered", {
           params: {
             status: this.selectedUserType,
             al_year: this.selectedUserYear,
             search_term: this.searchTerm,
             page_index: this.pageIndex,
           },
-        })
+        });
 
-        this.isLoading = false
+        this.isLoading = false;
 
         if (data) {
-          this.pageCount = data.data.page_count
-          this.studentList = []
+          this.pageCount = data.data.page_count;
+          this.studentList = [];
 
           data.data.users.forEach((user) => {
             const foundUser = this.selectedStudentsList.filter(
               (studentId) => user._id === studentId
-            )[0]
+            )[0];
 
             if (foundUser) {
               this.studentList.push({
                 checked: true,
                 ...user,
-              })
+              });
             } else {
               this.studentList.push({
                 checked: false,
                 ...user,
-              })
+              });
             }
-          })
+          });
         }
       } catch (e) {
         this.$notify({
-          type: 'error',
-          group: 'foo',
-          title: 'Form error!',
+          type: "error",
+          group: "foo",
+          title: "Form error!",
           text:
             e.response.data.message ??
-            'Something went wrong when getting users!',
-          position: 'top right',
-        })
+            "Something went wrong when getting users!",
+          position: "top right",
+        });
       }
     },
 
     async fetchUser(userId) {
       try {
-        this.isLoading = true
-        const { data } = await this.$axios.get('user/' + userId)
-        this.isLoading = false
-        const userResponse = data.data
+        this.isLoading = true;
+        const { data } = await this.$axios.get("user/" + userId);
+        this.isLoading = false;
+        const userResponse = data.data;
         if (userResponse) {
-          this.formFields = { ...this.formFields, ...userResponse }
+          this.formFields = { ...this.formFields, ...userResponse };
         }
       } catch (e) {}
     },
 
     async fetchClasses() {
       try {
-        this.isLoading = true
-        const { data } = await this.$axios.get('class')
-        this.isLoading = false
+        this.isLoading = true;
+        const { data } = await this.$axios.get("class");
+        this.isLoading = false;
         if (data) {
-          this.classesList = data.data
+          this.classesList = data.data;
         }
       } catch (e) {}
     },
 
     async handleSaveButtonClick() {
       if (!(await this.$refs.editUserForm.validate())) {
-        this.showNotification('error', 'Please fill required fields.')
-        return false
+        this.showNotification("error", "Please fill required fields.");
+        return false;
       }
 
-      if (!this.formFields.date_from && this.formFields.status === 'approved') {
-        this.showNotification('error', 'Please add start date for student.')
-        return false
+      if (!this.formFields.date_from && this.formFields.status === "approved") {
+        this.showNotification("error", "Please add start date for student.");
+        return false;
       }
 
-      if (!this.formFields.date_to && this.formFields.status === 'approved') {
+      if (!this.formFields.date_to && this.formFields.status === "approved") {
         this.showNotification(
-          'error',
-          'Please add expiration date for student.'
-        )
-        return false
+          "error",
+          "Please add expiration date for student."
+        );
+        return false;
       }
 
       if (
         !this.formFields.classes.length &&
-        this.formFields.status === 'approved' &&
-        (this.prev_status === 'pending' || this.prev_status === 'rejected')
+        this.formFields.status === "approved" &&
+        (this.prev_status === "pending" || this.prev_status === "rejected")
       ) {
-        this.showNotification('error', 'Please add classes for student.')
-        return false
+        this.showNotification("error", "Please add classes for student.");
+        return false;
       }
 
-      await this.updateUserInfo(this.formFields._id, this.formFields)
+      await this.updateUserInfo(this.formFields._id, this.formFields);
 
-      this.$modal.hide('student-modal')
+      this.$modal.hide("student-modal");
     },
 
     async showStudentModal(userId) {
-      await this.fetchUser(userId)
-      this.$modal.show('student-modal')
+      await this.fetchUser(userId);
+      this.$modal.show("student-modal");
     },
 
     closeStudentModal() {
-      this.resetSelectedUser()
+      this.resetSelectedUser();
 
-      this.isFormEditable = false
+      this.isFormEditable = false;
 
-      this.$modal.hide('student-modal')
+      this.$modal.hide("student-modal");
     },
 
     closeMultiUserActionsModal() {
-      this.$modal.hide('multi-user-actions-modal')
+      this.$modal.hide("multi-user-actions-modal");
     },
   },
-}
+};
 </script>
 
 <style scoped>

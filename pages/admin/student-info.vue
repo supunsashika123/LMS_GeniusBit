@@ -28,58 +28,58 @@
 </template>
 
 <script>
-import StudentsPageTableRow from '@/components/admin/students/StudentsPageTableRow'
-import SearchField from '@/components/SearchField'
+import StudentsPageTableRow from "@/components/admin/students/StudentsPageTableRow";
+import SearchField from "@/components/SearchField";
 
 export default {
-  name: 'StudentInfo',
+  name: "StudentInfo",
 
   components: {
     SearchField,
     StudentsPageTableRow,
   },
 
-  layout: 'admin',
+  layout: "admin",
 
   data() {
     return {
       pendingLists: [],
-    }
+    };
   },
 
   created() {
-    this.fetchPendingList()
+    this.fetchPendingList();
   },
 
   methods: {
     fetchPendingList() {
       // TODO:this.pendingLists = await this.$axios.get('URL')
       const respose = {
-        template: 'MEVN',
+        template: "MEVN",
         price: 0,
         options: [
           {
-            name: 'Dilshan',
-            userName: 'D0001',
-            email: 'dilshan@gmail.com',
+            name: "Lasitha",
+            userName: "L0001",
+            email: "Lasitha@gmail.com",
           },
           {
-            name: 'Supun',
-            userName: 'S0001',
-            email: 'supun@gmail.com',
+            name: "Supun",
+            userName: "S0001",
+            email: "supun@gmail.com",
           },
           {
-            name: 'Piyum',
-            userName: 'P0001',
-            email: 'piyum@gmail.com',
+            name: "Piyum",
+            userName: "P0001",
+            email: "piyum@gmail.com",
           },
         ],
-      }
+      };
 
-      this.pendingLists = respose.options
+      this.pendingLists = respose.options;
     },
   },
-}
+};
 </script>
 
 <style scoped>
