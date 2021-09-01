@@ -9,43 +9,47 @@
       class="hidden sm:block"
       @menu-item-click="handleMenuClick($event)"
     />
-    <Nuxt class="padding-left padding-top" />
+    <Nuxt class="padding-left padding-top body-bg-color" />
     <FooterBar />
   </div>
 </template>
 
 <script>
-import HeaderBarAdmin from '@/components/header/HeaderBarAdmin'
-import FooterBar from '@/components/footer/FooterBar'
-import SidebarAdmin from '~/components/sidebar/SidebarAdmin'
+import HeaderBarAdmin from "@/components/header/HeaderBarAdmin";
+import FooterBar from "@/components/footer/FooterBar";
+import SidebarAdmin from "~/components/sidebar/SidebarAdmin";
 
 export default {
-  name: 'Admin',
+  name: "Admin",
 
-  middleware: ['auth-admin'],
+  middleware: ["auth-admin"],
 
   components: { SidebarAdmin, FooterBar, HeaderBarAdmin },
 
   data() {
     return {
-      menuItems: ['Pending', 'Students', 'Classes', 'Videos', 'Docs'],
+      menuItems: ["Pending", "Students", "Classes", "Videos", "Docs"],
 
-      activeMenuItem: 'Pending',
-    }
+      activeMenuItem: "Pending",
+    };
   },
 
   methods: {
     handleMenuClick(route) {
-      this.activeMenuItem = route
+      this.activeMenuItem = route;
       this.$router.push({
-        path: '/' + route.toLowerCase(),
-      })
+        path: "/" + route.toLowerCase(),
+      });
     },
   },
-}
+};
 </script>
 
 <style>
+.body-bg-color {
+  background: #f5f5f5;
+}
+
 .confirm-alert {
   font-size: 16px !important;
 }

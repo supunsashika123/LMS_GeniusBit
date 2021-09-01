@@ -20,11 +20,13 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/vee-validate.js",
-    '~/plugins/vue-js-modal.js',
+    "~/plugins/vue-js-modal.js",
     { src: "~/plugins/notifications-ssr", mode: "server" },
     { src: "~/plugins/notifications-client", mode: "client" },
-    { src: '~/plugins/vue-confirm-dialog.js', mode: 'client' },
-
+    { src: "~/plugins/vue-confirm-dialog.js", mode: "client" },
+    { src: '~/plugins/vue-datepicker', ssr: false },
+    { src: '~/plugins/vue-date-time-picker', ssr: false },
+    { src: '~plugins/vuejs-paginate.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -73,5 +75,9 @@ export default {
       callback: false,
       home: "/",
     },
+  },
+  loading: {
+    color: "white",
+    height: "5px",
   },
 };

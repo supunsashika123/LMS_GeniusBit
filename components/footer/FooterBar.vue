@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-12 bg-red fixed flex items-center bottom-0">
+  <div class="w-full h-12 bg-dark-blue fixed flex items-center bottom-0">
     <div class="w-1/3"></div>
     <div class="w-1/3 flex-row justify-center text-white footer-font-size">
       <div class="flex text-center justify-center">© 2021 GeniusBit</div>

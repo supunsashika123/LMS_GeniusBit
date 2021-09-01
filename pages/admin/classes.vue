@@ -94,7 +94,7 @@
           <div
             v-for="(singleClass, index) of classesList"
             :key="index"
-            class="flex bg-gray-400 px-4 py-2 rounded-lg mt-2"
+            class="flex bg-blue-light px-4 py-2 rounded-lg mt-2"
           >
             <div class="w-48">{{ singleClass.name }}</div>
             <div class="w-48">

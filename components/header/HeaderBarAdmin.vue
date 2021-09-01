@@ -1,9 +1,10 @@
 <template>
-  <div class="w-full h-12 bg-white border-b border-red fixed z-40">
-    <nav class="flex items-center justify-between flex-wrap bg-red py-2 px-4">
+  <div class="w-full h-12 bg-white border-b border-dark-blue fixed z-40">
+    <nav class="flex items-center justify-between flex-wrap bg-dark-blue py-2 px-4">
       <div class="flex flex-row justify-between">
         <div class="flex items-center flex-no-shrink text-white mr-6">
-          <SvgIcon name="logo" class="h-12 w-24" />
+          <!-- <SvgIcon name="logo" class="h-12 w-24" /> -->
+          <img src="~/assets/images/logo-white.jpg" class="h-12 w-24"/>
           <span class="font-bold text-xl text-white pl-4">ADMIN DASHBOARD</span>
         </div>
       </div>

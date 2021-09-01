@@ -48,6 +48,11 @@ export default {
           display: 'Students',
           icon: 'student',
         },
+        {
+          value: '/admin/classes',
+          display: 'Classes',
+          icon: 'presentation',
+        },
       ],
     }
   },
