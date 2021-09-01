@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="isActive ? 'border-2 border-red ' : ''"
+    :class="isActive ? 'border-2 border-black ' : ''"
     class="rounded-lg w-full h-10 flex start items-center cursor-pointer"
   >
     <NuxtLink :to="routeName">
@@ -15,7 +15,7 @@
         <div class="text-gray-800 text-lg font-medium">
           <span
             class="hover-effect text-xs"
-            :class="isActive ? ' text-red ' : ''"
+            :class="isActive ? ' text-black ' : ''"
             >{{ name }}
           </span>
         </div>
@@ -61,9 +61,9 @@ export default {
   stroke: theme("colors.gray.700");
 }
 .active-svg {
-  fill: theme("colors.red");
-  color: theme("colors.red");
-  stroke: theme("colors.red");
+  fill: theme("colors.black");
+  color: theme("colors.black");
+  stroke: theme("colors.black");
 }
 .wrapper:hover .hover-effect {
   fill: theme("colors.purple.800");

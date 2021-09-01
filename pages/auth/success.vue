@@ -18,23 +18,23 @@
 </template>
 
 <script>
-import SuccessButton from '@/components/buttons/SuccessButton'
+import SuccessButton from "@/components/buttons/SuccessButton";
 
 export default {
-  name: 'Success',
+  name: "Success",
 
   components: { SuccessButton },
 
-  middleware: 'guest',
+  middleware: "guest",
 
-  layout: 'authentication',
+  layout: "authentication",
 
   methods: {
     handleContinueButtonClick() {
-      return this.$router.push('/')
+      return this.$router.push("/");
     },
   },
-}
+};
 </script>
 
 <style scoped>

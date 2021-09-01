@@ -1,34 +1,36 @@
 <template>
   <div>
     <notifications group="foo" />
-    <client-only><vue-confirm-dialog /></client-only>
-    <HeaderBar />
-    <Sidebar
+    <client-only><vue-confirm-dialog class="confirm-alert" /></client-only>
+    <HeaderBarAdmin />
+    <SidebarAdmin
       :active-menu="activeMenuItem"
       :menu-items="menuItems"
       class="hidden sm:block"
       @menu-item-click="handleMenuClick($event)"
     />
-    <Nuxt class="padding-left padding-top" />
+    <Nuxt class="padding-left padding-top body-bg-color" />
     <FooterBar />
   </div>
 </template>
 
 <script>
-import HeaderBar from "@/components/header/HeaderBar";
+import HeaderBarAdmin from "@/components/header/HeaderBarAdmin";
 import FooterBar from "@/components/footer/FooterBar";
-import Sidebar from "@/components/sidebar/Sidebar";
+import SidebarAdmin from "~/components/sidebar/SidebarAdmin";
 
 export default {
-  name: "Dashboard",
+  name: "Admin",
 
-  components: { Sidebar, FooterBar, HeaderBar },
+  middleware: ["auth-admin"],
+
+  components: { SidebarAdmin, FooterBar, HeaderBarAdmin },
 
   data() {
     return {
-      menuItems: ["Home", "Online-Classes", "Documents"],
+      menuItems: ["Pending", "Students", "Classes", "Videos", "Docs"],
 
-      activeMenuItem: "Home",
+      activeMenuItem: "Pending",
     };
   },
 
@@ -43,7 +45,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.body-bg-color {
+  background: #f5f5f5;
+}
+
+.confirm-alert {
+  font-size: 16px !important;
+}
+
 @media screen and (min-width: 640px) {
   .padding-left {
     padding-left: 224px;
@@ -51,6 +61,6 @@ export default {
 }
 
 .padding-top {
-  padding-top: 64px;
+  padding-top: 84px;
 }
 </style>

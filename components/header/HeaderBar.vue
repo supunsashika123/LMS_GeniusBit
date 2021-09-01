@@ -159,7 +159,7 @@
               <div class="cursor-pointer ml-2" @click="handleLogoutButtonPress">
                 <SvgIcon
                   name="exit"
-                  class="h-6 w-6 exit-icon-color hidden sm:block"
+                  class="h-6 w-6 exit-icon-color sm:block"
                 />
               </div>
             </div>

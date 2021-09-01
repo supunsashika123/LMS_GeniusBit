@@ -20,8 +20,13 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/vee-validate.js",
+    "~/plugins/vue-js-modal.js",
     { src: "~/plugins/notifications-ssr", mode: "server" },
     { src: "~/plugins/notifications-client", mode: "client" },
+    { src: "~/plugins/vue-confirm-dialog.js", mode: "client" },
+    { src: '~/plugins/vue-datepicker', ssr: false },
+    { src: '~/plugins/vue-date-time-picker', ssr: false },
+    { src: '~plugins/vuejs-paginate.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -31,11 +36,12 @@ export default {
   buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/eslint-module"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next", "nuxt-vue-multiselect"],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: "https://geniusbitapi.herokuapp.com/",
+    // baseURL: "https://geniusbitapi.herokuapp.com/",
+    baseURL: "http://localhost:4000/",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -64,10 +70,14 @@ export default {
       },
     },
     redirect: {
-      login: "/",
-      logout: "/",
+      login: "/auth/login",
+      logout: "/auth/login",
       callback: false,
-      home: "/home",
+      home: "/",
     },
+  },
+  loading: {
+    color: "white",
+    height: "5px",
   },
 };
