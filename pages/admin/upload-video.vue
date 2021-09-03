@@ -69,7 +69,42 @@
               label="name"
             ></multiselect>
           </div>
-
+          <div class="flex flex-col lg:flex-row justify-between max-w-lg mt-4">
+            <div class="max-w-lg">
+              <div>
+                <label class="block text-2xs font-normal text-black text-left"
+                  >Select publish date
+                </label>
+                <div class="mt-1 relative rounded-md">
+                  <client-only
+                    ><datetime
+                      v-model="auto_publish_date"
+                      type="datetime"
+                      :minute-step="15"
+                      input-class="appearance-none w-full block w-full flex items-center h-10 px-2 border border-gray-800 rounded-lg placeholder-gray-400 focus:outline-none transition duration-150 ease-in-out text-sm sm:leading-5 font-medium"
+                    ></datetime>
+                  </client-only>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-lg">
+              <div>
+                <label class="block text-2xs font-normal text-black text-left"
+                  >Select expiry date
+                </label>
+                <div class="mt-1 relative rounded-md">
+                  <client-only
+                    ><datetime
+                      v-model="expiry_date"
+                      type="datetime"
+                      :minute-step="15"
+                      input-class="appearance-none w-full block w-full flex items-center h-10 px-2 border border-gray-800 rounded-lg placeholder-gray-400 focus:outline-none transition duration-150 ease-in-out text-sm sm:leading-5 font-medium"
+                    ></datetime
+                  ></client-only>
+                </div>
+              </div>
+            </div>
+          </div>
           <div>
             <div class="pt-4 block text-2xs font-normal text-black text-left">
               Upload Thumbnail (1280 X 720 px)
@@ -211,6 +246,8 @@ export default {
       title: '',
       description: '',
       url: '',
+      expiry_date: new Date().toISOString(),
+      auto_publish_date: new Date().toISOString(),
       currentTimestamp: {
         title: '',
         minutes: '',
@@ -249,6 +286,9 @@ export default {
       this.selectedImage = data.data.thumbnail
       this.timestamps = data.data.timestamps
       this.videoSource = data.data.source
+
+      this.expiry_date = data.data.expiry_date
+      this.auto_publish_date = data.data.auto_publish_date
     },
 
     showNotification(type, text) {
@@ -311,6 +351,8 @@ export default {
       this.url = ''
       this.selectedClasses = []
       this.selectedImage = ''
+      this.expiry_date = ''
+      this.auto_publish_date = ''
       this.timestamps = []
 
       await this.$refs.videoSubmitForm.reset()
@@ -328,6 +370,8 @@ export default {
               : this.url,
           classes: this.selectedClasses.map((c) => c.id),
           thumbnail: this.selectedImage,
+          expiry_date: moment.utc(this.expiry_date),
+          auto_publish_date: moment.utc(this.auto_publish_date),
           timestamps: this.timestamps,
         })
         this.showNotification('success', 'Video submitted successfully!')
@@ -349,6 +393,8 @@ export default {
               : this.url,
           classes: this.selectedClasses.map((c) => c.id),
           thumbnail: this.selectedImage,
+          expiry_date: this.expiry_date,
+          auto_publish_date: this.auto_publish_date,
           timestamps: this.timestamps,
           source: this.videoSource,
         })
