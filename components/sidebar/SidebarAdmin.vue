@@ -53,6 +53,11 @@ export default {
           display: 'Classes',
           icon: 'presentation',
         },
+        {
+          value: '/admin/videos',
+          display: 'Videos',
+          icon: 'video',
+        },
       ],
     }
   },
