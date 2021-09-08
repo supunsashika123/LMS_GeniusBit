@@ -2,19 +2,13 @@
   <div class="h-screen overflow-auto">
     <div class="m-6">
       <div
-        class="
-          flex flex-col
-          justify-center
-          md:flex-row
-          items-center
-          justify-between
-        "
+        class="flex flex-col justify-center md:flex-row items-center justify-between"
       >
         <div class="text-2xl font-bold pt-4 text-center lg:text-left pb-4">
           Videos
         </div>
         <div class="flex flex-col md:flex-row mt-8 sm:mt-0 sm:ml-8 md:ml-0">
-          <NuxtLink to="admin/upload-video">
+          <NuxtLink to="/admin/upload-video">
             <div class="flex justify-center">
               <PendingTableRemoveButton
                 class="text-center px-4 py-2"
@@ -31,16 +25,7 @@
           </label>
           <select
             v-model="selectedVideoType"
-            class="
-              border
-              mt-1
-              h-10
-              w-full
-              border-gray-800
-              focus:outline-none
-              rounded-lg
-              py-2
-            "
+            class="border mt-1 h-10 w-full border-gray-800 focus:outline-none rounded-lg py-2"
             name="type"
           >
             <option value="pending">Pending</option>
@@ -55,16 +40,7 @@
           <select
             v-model="selectedClass"
             name=""
-            class="
-              border
-              mt-1
-              h-10
-              w-full
-              border-gray-800
-              focus:outline-none
-              rounded-lg
-              py-2
-            "
+            class="border mt-1 h-10 w-full border-gray-800 focus:outline-none rounded-lg py-2"
           >
             <option selected value="">All</option>
             <option
@@ -74,11 +50,11 @@
             >
               {{
                 classItem.name +
-                " " +
+                ' ' +
                 classItem.type +
-                " " +
+                ' ' +
                 classItem.year +
-                " " +
+                ' ' +
                 classItem.institute
               }}
             </option>
@@ -116,12 +92,12 @@
 </template>
 
 <script>
-import PrimaryButton from "@/components/buttons/PrimaryButton";
-import VideoThumbnailPreview from "@/components/video/VideoThumbnailPreview";
-import PendingTableRemoveButton from "@/components/admin/pending-page/PendingTableRemoveButton";
+import PrimaryButton from '@/components/buttons/PrimaryButton'
+import VideoThumbnailPreview from '@/components/video/VideoThumbnailPreview'
+import PendingTableRemoveButton from '@/components/admin/pending-page/PendingTableRemoveButton'
 
 export default {
-  name: "Videos",
+  name: 'Videos',
 
   components: {
     PendingTableRemoveButton,
@@ -129,71 +105,71 @@ export default {
     PrimaryButton,
   },
 
-  layout: "admin",
+  layout: 'admin',
 
-  middleware: "guest",
+  middleware: 'guest',
 
   data() {
     return {
       videoList: [],
-      selectedVideoType: "active",
+      selectedVideoType: 'active',
       loading: false,
       classesList: [],
-      selectedClass: "",
-    };
+      selectedClass: '',
+    }
   },
 
   created() {
-    this.fetchVideos();
-    this.fetchClasses();
+    this.fetchVideos()
+    this.fetchClasses()
   },
 
   methods: {
     async handleFilterButtonClick() {
-      await this.fetchVideos();
+      await this.fetchVideos()
     },
 
     async fetchClasses() {
       try {
-        this.isLoading = true;
-        const { data } = await this.$axios.get("class");
-        this.isLoading = false;
+        this.isLoading = true
+        const { data } = await this.$axios.get('class')
+        this.isLoading = false
         if (data) {
-          this.classesList = data.data;
+          this.classesList = data.data
         }
       } catch (e) {}
     },
 
     handleVideoClick(id) {
       return this.$router.push({
-        path: "upload-video",
+        path: 'upload-video',
         query: { id },
-      });
+      })
     },
 
     async fetchVideos() {
       try {
-        this.loading = true;
+        this.loading = true
 
         let params = {
           status: this.selectedVideoType,
-        };
-
-        if (this.selectedClass) {
-          params = { ...params, classes: this.selectedClass };
         }
 
-        const { data } = await this.$axios.get("video/getFiltered", {
+        if (this.selectedClass) {
+          params = { ...params, classes: this.selectedClass }
+        }
+
+        const { data } = await this.$axios.get('video/getFiltered', {
           params,
-        });
+        })
 
-        this.loading = false;
+        this.loading = false
 
-        this.videoList = data.data;
+        this.videoList = data.data
       } catch (e) {}
     },
   },
-};
+}
 </script>
 
 <style scoped>

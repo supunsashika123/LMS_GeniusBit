@@ -53,20 +53,15 @@ export default {
       isShowing: false,
       routes: [
         {
-          value: "/home",
-          display: "Home",
-          icon: "home",
-        },
-        {
           value: "/online-classes",
-          display: "Online Classes",
+          display: "Videos",
           icon: "online-teaching",
         },
-        {
-          value: "/documents",
-          display: "Documents",
-          icon: "document",
-        },
+        // {
+        //   value: "/documents",
+        //   display: "Documents",
+        //   icon: "document",
+        // },
       ],
     };
   },

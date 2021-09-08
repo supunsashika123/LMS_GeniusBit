@@ -61,7 +61,7 @@ export default {
         },
         {
           value: "/admin/classes",
-          display: "Classes",
+          display: "Courses",
           icon: "presentation",
         },
         {

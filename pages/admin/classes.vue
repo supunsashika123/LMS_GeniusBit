@@ -10,7 +10,7 @@
         <div class="px-4 w-full table-width py-8">
           <div class="w-full">
             <div class="flex justify-between">
-              <div class="text-xl font-bold pb-2">Add New Class</div>
+              <div class="text-xl font-bold pb-2">Add New Course</div>
               <button class="focus:outline-none" @click="close">
                 <SvgIcon name="cross" class="h-6 w-6 focus:outline-none mr-4" />
               </button>
@@ -25,7 +25,7 @@
             </div>
             <div class="pt-2">
               <label class="block text-2xs font-normal text-black text-left">
-                Class Type
+                Course Type
               </label>
               <select
                 id="class_type"
@@ -34,14 +34,14 @@
                 name="type"
               >
                 <option value="" selected disabled>Please Select</option>
-                <option value="revision">Revision</option>
-                <option value="theory">Theory</option>
-                <option value="paper">Paper</option>
+                <option value="robotics">Robotics</option>
+                <option value="test 2">Test 2</option>
+                <option value="test 3">Test 3</option>
               </select>
             </div>
             <div class="pt-2">
               <label class="block text-2xs font-normal text-black text-left">
-                Class Year
+                Course Year
               </label>
               <select
                 id="alYear"
@@ -57,7 +57,7 @@
             </div>
             <div class="pt-2">
               <label class="block text-2xs font-normal text-black text-left">
-                Institute
+                Institute Location
               </label>
               <select
                 id="institute"
@@ -66,9 +66,9 @@
                 name="institute"
               >
                 <option value="" selected>Select Institute</option>
-                <option value="Syntax Symposium">Syntax Symposium</option>
-                <option value="Samadhi Institute">Samadhi Institute</option>
-                <option value="Rotary Nugegoda">Rotary Nugegoda</option>
+                <option value="Colombo">Colombo</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="NIBM">NIBM</option>
                 <option value="Online">Online</option>
                 <option value="Other">Other</option>
               </select>
@@ -81,11 +81,11 @@
       </modal>
       <div class="flex justify-between items-center">
         <div class="text-2xl font-bold pt-4 text-center lg:text-left pb-4">
-          Classes
+          Courses
         </div>
         <PendingTableRemoveButton
           class="px-4 py-2"
-          text="Add new class"
+          text="Add new course"
           @click="showNewModal"
         />
       </div>

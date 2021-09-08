@@ -21,6 +21,7 @@ export default {
   plugins: [
     "~/plugins/vee-validate.js",
     "~/plugins/vue-js-modal.js",
+    { src: '~/plugins/vue-plyr', mode: 'client' },
     { src: "~/plugins/notifications-ssr", mode: "server" },
     { src: "~/plugins/notifications-client", mode: "client" },
     { src: "~/plugins/vue-confirm-dialog.js", mode: "client" },
