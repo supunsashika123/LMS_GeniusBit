@@ -42,25 +42,18 @@
               class="block text-base text-white mt-4 hover:text-white text-center"
               @click="toggle"
             >
-              Classes
+              Courses
             </div>
           </NuxtLink>
-          <NuxtLink to="admin/documents">
+          <!-- <NuxtLink to="admin/documents">
             <div
               class="block text-base text-white mt-4 hover:text-white text-center"
               @click="toggle"
             >
               Documents
             </div>
-          </NuxtLink>
-          <NuxtLink to="admin/live-classes">
-            <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
-              @click="toggle"
-            >
-              Live Classes
-            </div>
-          </NuxtLink>
+          </NuxtLink> -->
+
           <NuxtLink to="admin/videos">
             <div
               class="block text-base text-white mt-4 hover:text-white text-center"
@@ -69,46 +62,7 @@
               Videos
             </div>
           </NuxtLink>
-          <NuxtLink to="admin/news">
-            <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
-              @click="toggle"
-            >
-              News
-            </div>
-          </NuxtLink>
-          <NuxtLink to="admin/gallery">
-            <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
-              @click="toggle"
-            >
-              Gallery
-            </div>
-          </NuxtLink>
-          <NuxtLink to="admin/quiz">
-            <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
-              @click="toggle"
-            >
-              Online Quizzes
-            </div>
-          </NuxtLink>
-          <NuxtLink to="/papers" @click.native="showMobileMenu = false">
-            <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
-              @click="toggle"
-            >
-              Papers
-            </div>
-          </NuxtLink>
-          <NuxtLink to="admin/customize-content">
-            <div
-              class="block text-base text-white mt-4 hover:text-white text-center"
-              @click="toggle"
-            >
-              Customize Content
-            </div>
-          </NuxtLink>
+
           <div
             class="block text-base text-white mt-4 cursor-pointer hover:text-white text-center font-bold"
             @click="handleLogoutButtonPress"

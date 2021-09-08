@@ -63,6 +63,17 @@ export default {
 
   components: {},
 
+  head() {
+    return {
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://unpkg.com/vue-plyr/dist/vue-plyr.css',
+        },
+      ],
+    }
+  },
+
   data() {
     return {
       id: this.$route.query.id,
