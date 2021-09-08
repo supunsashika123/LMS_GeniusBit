@@ -1,6 +1,17 @@
 <template>
   <div
-    class="h-screen w-56 bg-white border-r box-border absolute left-0 fixed px-4 py-12"
+    class="
+      h-screen
+      w-56
+      bg-white
+      border-r
+      box-border
+      absolute
+      left-0
+      fixed
+      px-4
+      py-12
+    "
   >
     <div class="pt-16">
       <div class="xl:mt-5">
@@ -19,14 +30,14 @@
 </template>
 
 <script>
-import SidebarMenuItem from '~/components/sidebar/SidebarMenuItem'
+import SidebarMenuItem from "~/components/sidebar/SidebarMenuItem";
 
 export default {
-  name: 'SidebarAdmin',
+  name: "SidebarAdmin",
 
   components: { SidebarMenuItem },
 
-  layout: 'admin',
+  layout: "admin",
 
   props: {
     menuItems: {
@@ -44,26 +55,31 @@ export default {
       isShowing: false,
       routes: [
         {
-          value: '/admin/students',
-          display: 'Students',
-          icon: 'student',
+          value: "/admin/students",
+          display: "Students",
+          icon: "student",
         },
         {
-          value: '/admin/classes',
-          display: 'Classes',
-          icon: 'presentation',
+          value: "/admin/classes",
+          display: "Classes",
+          icon: "presentation",
+        },
+        {
+          value: "/admin/videos",
+          display: "Videos",
+          icon: "video",
         },
       ],
-    }
+    };
   },
 
   methods: {
     checkIsMenuActive(route) {
-      const currentUrl = this.$nuxt.$route.path.split('/admin')[1]
-      return route.value === '/admin' + currentUrl
+      const currentUrl = this.$nuxt.$route.path.split("/admin")[1];
+      return route.value === "/admin" + currentUrl;
     },
   },
-}
+};
 </script>
 
 <style scoped>
