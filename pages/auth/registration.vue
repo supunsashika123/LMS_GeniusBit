@@ -120,7 +120,7 @@
                     <label
                       class="block text-2xs font-normal text-black text-left"
                     >
-                      Course Name
+                      Course Year
                     </label>
                     <select
                       id="alYear"

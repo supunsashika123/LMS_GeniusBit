@@ -31,7 +31,7 @@ export default {
 
   methods: {
     handleContinueButtonClick() {
-      return this.$router.push("/");
+      return this.$router.push("/auth/login");
     },
   },
 };
@@ -42,11 +42,11 @@ export default {
   font-size: 32px;
 }
 
-/*.background-image {*/
-/*  background-image: url('../../assets/images/Background.jpg');*/
-/*  background-repeat: no-repeat;*/
-/*  background-size: cover;*/
-/*}*/
+.background-image {
+ background-image: url('../../assets/images/Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .image-width {
   width: auto;

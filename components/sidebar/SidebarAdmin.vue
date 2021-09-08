@@ -61,18 +61,13 @@ export default {
         },
         {
           value: "/admin/classes",
-          display: "Classes",
+          display: "Courses",
           icon: "presentation",
         },
         {
           value: "/admin/videos",
           display: "Videos",
           icon: "video",
-        },
-        {
-          value: '/admin/videos',
-          display: 'Videos',
-          icon: 'video',
         },
       ],
     };

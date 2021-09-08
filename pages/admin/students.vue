@@ -107,7 +107,7 @@
                 v-model="formFields.al_year"
                 name="al_year"
                 class="pt-4 mx-4 lg:mx-0 lg:mr-2"
-                label="AL Year"
+                label="Registered Year"
                 rules="required"
                 :disabled="!isFormEditable"
               />
@@ -171,7 +171,7 @@
               </select>
               <div class="pt-4 lg:mr-2">
                 <div class="block text-2xs font-normal text-black text-left">
-                  Select
+                  Select Course
                 </div>
                 <multiselect
                   v-model="formFields.classes"
