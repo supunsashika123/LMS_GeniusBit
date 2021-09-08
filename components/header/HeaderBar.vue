@@ -6,11 +6,11 @@
         <img src="~/assets/images/logo-white.jpg" class="h-12 w-24"/>
       </div>
       <div class="flex flex-row items-center">
-        <NuxtLink to="student-info">
+        <!-- <NuxtLink to="student-info">
           <div class="h-8 w-8 rounded-full bg-white sm:hidden">
             <SvgIcon name="profile" class="h-8 w-8" />
           </div>
-        </NuxtLink>
+        </NuxtLink> -->
         <div class="sm:hidden">
           <MenuToggleButton v-model="showMobileMenu" class="ml-4" />
         </div>
@@ -45,10 +45,10 @@
               "
               @click="toggleMenu"
             >
-              Online Classes
+              Videos
             </div>
           </NuxtLink>
-          <NuxtLink to="documents" @click.native="showMobileMenu = false">
+          <!-- <NuxtLink to="documents" @click.native="showMobileMenu = false">
             <div
               class="
                 block
@@ -61,63 +61,11 @@
             >
               Documents
             </div>
-          </NuxtLink>
-          <NuxtLink to="live-classes" @click.native="showMobileMenu = false">
-            <div
-              class="
-                block
-                text-base text-white
-                mt-4
-                hover:text-white
-                text-center
-              "
-              @click="toggleMenu"
-            >
-              Live Classes
-            </div>
-          </NuxtLink>
-          <NuxtLink to="gallery" @click.native="showMobileMenu = false">
-            <div
-              class="
-                block
-                text-base text-white
-                mt-4
-                hover:text-white
-                text-center
-              "
-              @click="toggleMenu"
-            >
-              Gallery
-            </div>
-          </NuxtLink>
-          <NuxtLink to="/online-quiz" @click.native="showMobileMenu = false">
-            <div
-              class="
-                block
-                text-base text-white
-                mt-4
-                hover:text-white
-                text-center
-              "
-              @click="toggleMenu"
-            >
-              Online Quizzes
-            </div>
-          </NuxtLink>
-          <NuxtLink to="/papers" @click.native="showMobileMenu = false">
-            <div
-              class="
-                block
-                text-base text-white
-                mt-4
-                hover:text-white
-                text-center
-              "
-              @click="toggleMenu"
-            >
-              Papers
-            </div>
-          </NuxtLink>
+          </NuxtLink> -->
+
+
+
+
           <div
             class="
               block
@@ -136,7 +84,7 @@
         <div>
           <div class="hidden sm:block">
             <div class="flex">
-              <NuxtLink to="student-info">
+              <!-- <NuxtLink to="student-info">
                 <div class="flex flex-row items-center">
                   <div class="h-8 w-8 rounded-full">
                     <SvgIcon name="profile" class="h-8 w-8" />
@@ -156,7 +104,7 @@
                     Test
                   </div>
                 </div>
-              </NuxtLink>
+              </NuxtLink> -->
               <div class="cursor-pointer ml-2" @click="handleLogoutButtonPress">
                 <SvgIcon
                   name="exit"
