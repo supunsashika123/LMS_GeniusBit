@@ -41,7 +41,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: "https://geniusbitapi.herokuapp.com/",
+    baseURL: "http://104.42.249.174:3000/",
     // baseURL: "http://localhost:4000/",
   },
 
