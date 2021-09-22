@@ -8,7 +8,7 @@
           Documents
         </div>
         <div>
-          <NuxtLink to="admin/upload-document">
+          <NuxtLink to="/admin/upload-document">
             <div class="md:ml-4 flex justify-center">
               <PendingTableRemoveButton
                 class="text-center px-4 py-2"

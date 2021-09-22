@@ -416,7 +416,7 @@ export default {
         const userResponse = data.data;
         if (userResponse) {
           this.formFields = { ...this.formFields, ...userResponse };
-          this.profileImageUrl = userResponse.image + "?" + Math.random() ?? "";
+          this.profileImageUrl = userResponse.image ? userResponse.image + "?" + Math.random() ?? "" : '';
         }
       } catch (e) {}
     },

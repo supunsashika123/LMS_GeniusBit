@@ -35,7 +35,7 @@
         </div>
         <div class="ml-4 lg:mr-2">
           <div class="block text-2xs font-normal text-black text-left">
-            Select
+            Select Course
           </div>
           <select
             v-model="selectedClass"

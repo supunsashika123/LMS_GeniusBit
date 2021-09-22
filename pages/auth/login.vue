@@ -254,7 +254,7 @@ export default {
         }
 
         const path =
-          data.data.user.type === "admin" ? "/admin/students" : "/home";
+          data.data.user.type === "admin" ? "/admin/students" : "/online-classes";
 
         return this.$router.push({
           path,

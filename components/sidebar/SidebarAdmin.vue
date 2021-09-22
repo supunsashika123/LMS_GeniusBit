@@ -69,6 +69,11 @@ export default {
           display: "Videos",
           icon: "video",
         },
+        {
+          value: '/admin/documents',
+          display: 'Documents',
+          icon: 'document',
+        },
       ],
     };
   },

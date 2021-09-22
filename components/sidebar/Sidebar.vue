@@ -57,11 +57,11 @@ export default {
           display: "Videos",
           icon: "online-teaching",
         },
-        // {
-        //   value: "/documents",
-        //   display: "Documents",
-        //   icon: "document",
-        // },
+        {
+          value: "/documents",
+          display: "Documents",
+          icon: "document",
+        },
       ],
     };
   },

@@ -48,7 +48,7 @@
               Videos
             </div>
           </NuxtLink>
-          <!-- <NuxtLink to="documents" @click.native="showMobileMenu = false">
+          <NuxtLink to="documents" @click.native="showMobileMenu = false">
             <div
               class="
                 block
@@ -61,7 +61,7 @@
             >
               Documents
             </div>
-          </NuxtLink> -->
+          </NuxtLink>
 
 
 
@@ -84,7 +84,7 @@
         <div>
           <div class="hidden sm:block">
             <div class="flex">
-              <!-- <NuxtLink to="student-info">
+              <NuxtLink to="student-info">
                 <div class="flex flex-row items-center">
                   <div class="h-8 w-8 rounded-full">
                     <SvgIcon name="profile" class="h-8 w-8" />
@@ -104,7 +104,7 @@
                     Test
                   </div>
                 </div>
-              </NuxtLink> -->
+              </NuxtLink>
               <div class="cursor-pointer ml-2" @click="handleLogoutButtonPress">
                 <SvgIcon
                   name="exit"

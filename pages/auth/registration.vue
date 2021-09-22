@@ -115,6 +115,13 @@
                   label="School"
                   class="pt-4"
                 />
+                <TextField
+                  v-model="invoiceNo"
+                  rules="required"
+                  name="invoiceNo"
+                  label="Invoice No"
+                  class="pt-4"
+                />
                 <div class="flex pt-4">
                   <div class="w-1/2">
                     <label
@@ -237,6 +244,7 @@ export default {
       password: "",
       res: "",
       bgHeight: "",
+      invoiceNo: "",
     };
   },
 
@@ -286,6 +294,7 @@ export default {
           address: this.address,
           email: this.email,
           school: this.school,
+          invoice_no: this.invoiceNo,
           mobile: this.mobile,
           al_year: this.al_year,
           gender: this.gender,
