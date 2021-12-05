@@ -697,11 +697,11 @@
               :page-count="pageCount"
               :prev-text="'Prev'"
               :next-text="'Next'"
-              container-class="shadow bg-white pagination border border-coral-700 flex rounded-md select-none text-gray"
-              page-class="px-2 py-1 hover:text-coral-700 h-full"
+              container-class="shadow bg-white pagination border flex rounded-md select-none text-gray"
+              page-class="px-2 py-1 hover:dark-blue h-full"
               prev-class="px-2 py-1"
               next-class="px-2 py-1"
-              active-class="text-coral-700"
+              active-class="text-dark-blue"
             ></Paginate>
           </ClientOnly>
         </div>

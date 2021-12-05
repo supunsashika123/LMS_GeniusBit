@@ -115,13 +115,13 @@
                   label="School"
                   class="pt-4"
                 />
-                <TextField
-                  v-model="invoiceNo"
-                  rules="required"
-                  name="invoiceNo"
-                  label="Invoice No"
-                  class="pt-4"
-                />
+<!--                <TextField-->
+<!--                  v-model="invoiceNo"-->
+<!--                  rules="required"-->
+<!--                  name="invoiceNo"-->
+<!--                  label="Invoice No"-->
+<!--                  class="pt-4"-->
+<!--                />-->
                 <div class="flex pt-4">
                   <div class="w-1/2">
                     <label
